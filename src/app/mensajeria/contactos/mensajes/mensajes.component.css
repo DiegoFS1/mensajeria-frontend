@@ -1,0 +1,32 @@
+.mensajes-card{
+    padding: 10px;
+    margin: 10px;
+    border: 0.5px solid black;
+}
+
+
+.card-enviado{
+    display:flex;
+    justify-content: flex-start;
+}
+
+.card-recibido{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.inputMensajeDiv{
+    width:80%;
+}
+
+.formMensajes{
+    width:100%;
+}
+
+#inputMensaje{
+    width: 90%;
+}
+
+#botonMensaje{
+    width: 10%;
+}

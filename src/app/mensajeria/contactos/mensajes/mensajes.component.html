@@ -1,0 +1,39 @@
+          <mat-card >
+              <mat-card-header>
+                <mat-card-title>{{data.nombre}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content #matCardMensajes [style.overflow]="'auto'" [style.height.px]="'300'">
+                <div *ngFor="let json of data.mensajes">
+                  <div class="justify-content-start card-enviado" *ngIf="json.idEnvio==0">
+                      <div class="mensajes-card" >
+                          <div>
+                            <p>{{json.hora}}</p>
+                          </div>
+                          <div>
+                            <p>{{json.mensaje}}</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="justify-content-end card-recibido" *ngIf="json.idEnvio==1">
+                      <div class="mensajes-card" >
+                          <div>
+                            <p>{{json.hora}}</p>
+                          </div>
+                          <div>
+                            <p>{{json.mensaje}}</p>
+                          </div>
+                      </div>
+                  </div>
+                </div>                  
+              </mat-card-content>
+          </mat-card>
+      <div class="row">
+        <div class="col-sm-12">
+              <form class="form-inline formMensajes" name="inputForm">
+                    <input type="text" class="form-control" id="inputMensaje" #inputMensaje [(ngModel)]="mensajeEnvio" name="inputMensaje">
+                    <button type="submit" class="btn btn-primary" id="botonMensaje" (click)="enviarMensaje(mensajeEnvio,matCardMensajes)">Enviar</button>
+              </form>
+        </div>
+      </div>
+      
+

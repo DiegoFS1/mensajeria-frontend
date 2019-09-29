@@ -1,0 +1,10 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.container{
+    margin:10px 10px 10px 10px;
+}
+
+.contactos-card{
+    padding: 10px;
+    margin: 10px;
+}
